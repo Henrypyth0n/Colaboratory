@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html>
+<head><!-- to open chrome task manager shift + esc
+  two simulations in the browswer bash https://webvm.io/  assembly https://app.x64.halb.it/
+studel music through coding browser based
+http://strudel.cc/#Ly8gMS4gU2V0IGEgdmVyeSBzbG93IHRlbXBvICgwLjIgY3ljbGVzIHBlciBzZWNvbmQpCnNldGNwcygwLjIpCgovLyAyLiBDcmVhdGUgdGhlIEFtYmllbnQgSGFycAovKgpub3RlKCJDOm1hajkiKSAvLyBBIGJlYXV0aWZ1bCwgYWlyeSBjaG9yZAogIC5hcnAoIjAgMSAyIDQgMyAyICIpIC8vIFBsYXlzIHRoZSBub3RlcyBvbmUgYnkgb25lIGluIGEgc3RlYWR5IGxpbmUKICAucygiZm9sa2hhcnAiKSAvLyBVc2luZyB0aGUgYnVpbHQtaW4gaGFycAogIC5nYWluKDAuNikgLy8gS2VlcCBpdCBzb2Z0CiAgLnJvb20oMC45KSAvLyBMT1RTIG9mIHJldmVyYiBmb3IgdGhhdCAiZHJlYW15IiBmZWVsCiAgLnNpemUoMC45KSAvLyBNYWtlcyB0aGUgInJvb20iIGZlZWwgbGlrZSBhIG1hc3NpdmUgY2F0aGVkcmFsCiAgLnNsb3coMikgICAvLyBNYWtlcyB0aGUgd2hvbGUgcGF0dGVybiBwbGF5IGV2ZW4gc2xvd2VyCiAgLnZpYnJhdG8oNSwgMC4yKQogIC5kZWxheSgwLjUpLmRlbGF5ZmIoMC43KQpub3RlKCJnbV9sZWFkXzdfZmlmdGhzKDUpIHwgMTIiKQogIC5hcnAoIjAgMSAyIDQgMyAyIikKICAubHBmKHNpbmUucmFuZ2UoNDAwLCAyMDAwKS5zbG93KDgpKSAvLyBTbG93bHkgb3BlbnMgYW5kIGNsb3NlcyB0aGUgc291bmQKICAubHBxKDUpIC8vIEFkZHMgYSBsaXR0bGUgInppbmciIHRvIHRoZSBtb3ZlbWVudAoqLwovKgpub3RlKCJjMiIpCiAgLnMoInNhd3Rvb3RoIikgCiAgLmxwZig0MDApICAgICAgICAgIC8vIE11ZmZsZXMgdGhlIHNvdW5kIHNvIGl0J3MgYSBkZWVwIHZpYnJhdGlvbgogIC5scHEoMTApICAgICAgICAgICAvLyBBZGRzIGEgIndldCIgcmVzb25hbmNlIHRvIHRoZSB2aWJyYXRpb24KICAuZ2FpbihzaW5lLnJhbmdlKDAuMSwgMC40KS5zbG93KDQpKSAvLyBUaGUgdm9sdW1lICJicmVhdGhlcyIgdXNpbmcgYW4gTEZPCiAgLnJvb20oMC44KQogICovCg%3D%3D
+devdocs link for code help js,css,html , web apis, http etc
+  https://devdocs.io/
+  free C tutorial web page
+  https://www.learn-c.org/
+  free to read book python
+  https://automatetheboringstuff.com/
+  pandas website
+  https://pandas.pydata.org/docs/user_guide/io.html
+  for learning how to type without looking at the keyboard
+  https://www.typingme.com/touch-typing/typing-lesson-1.php
+  https://libgdx.com/ java library
+  https://processing.org/
+-->
+
+    <!--<link rel="stylesheet" href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"/>-->
+    <script integrity="" type="module" src="https://pyscript.net/releases/2024.1.1/core.js" crossorigin="anonymous"></script> <!-- PyScript Core -->
+    <script integrity="" src="https://cdn.jsdelivr.net/npm/fengari-web@0.1.4/dist/fengari-web.min.js" crossorigin="anonymous"></script> <!-- Fengari Web -->
+    <script integrity="" src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js" crossorigin="anonymous"></script> <!-- SQL.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script> <!-- encryption JS -->
+    <script integrity="" src="https://cdnjs.cloudflare.com/ajax/libs/xterm/5.5.0/xterm.js" crossorigin="anonymous" ></script> <!-- Xterm -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.46.0/min/vs/loader.min.js" ></script> <!-- Monnacco syntax coloring -->
+</head>
+<style>
+  /*ideas: file upload feature */
+      :root {
+          --theme-color: rgba(80, 221, 255,0.9); /* Default color cyan*/
+          --bColor: #000814; /*#000814*/
+          --black: #000; /*#000*/
+          --green: #00ff00; /*#00ff00*/
+          --drkrgreen:#00dd00;
+          --red: #ff0000; /*#ff0000*/
+          --darkgrey: #222; /*#222*/
+          --darkblue: #555; /*#555*/
+          --clrbtnbc: #333; /*#333*/
+          --savebtnbc: #111; /*#111*/
+          --savebtnTheme:#ff00ff; /*#ff00ff*/
+          --saveTheme2:#00ff00; /*#00ff00*/
+          --titleColor:#00DDFF; /*#00DDFF*/
+          --darkcy: rgba(0,14,14,0.9);
+          --highlightbg: rgba(0,34,104,0.9);
+          --drkblue: rgba(0,14,84,0.9);
+          --highlighttxt: rgba(173,216,230,0.9);
+          --blue: rgba(0,0,255,0.9);
+      }
+      body {background-color: var(--black); color: var(--theme-color); font-family: monospace; padding: 15px;}
+      body::selection {background-color: var(--highlightbg)!important; color: var(--bColor) !important;}
+      .mainDetails {height:95vh;}
+      button {color:var(--theme-color);}
+      #empty h1{color:var(--drkrgreen) !important;}
+      #py-0 {color:var(--green) !important;}/**/ #py-1 {color:var(--green) !important;}
+      #compiler_output {border: 1px solid var(--darkblue); background-color: var(--black); padding: 10px; min-height: 100px; white-space: pre-wrap; color:var(--green);}
+      #compiler_output4 {border: 1px solid var(--darkblue); background-color: var(--black); padding: 10px; min-height: 100px; white-space: pre-wrap; color:var(--green); width:50%; margin:0;}
+      .details {background-color: var(--bColor);}
+      .details summary {color: var(--theme-color);}
+      /*tab css*/
+      .tab-labels::before { box-sizing:border-box; margin:0;padding:0;}
+      .tab-labels::after { box-sizing:border-box; margin:0;padding:0;}
+      .tab-labels::before { box-sizing:border-box; margin:0;padding:0;}
+      .tab-labels::after { box-sizing:border-box; margin:0;padding:0;}
+      .tabsy-face {gap:0px !important; background-color:var(--drkblue); color:var(--theme-color); height:90vh; max-width:2000px !important; width:100% !important; min-height:300px !important; }
+      .tabs-content {display:none !important; margin:0!important;padding:0;}
+      .radio-tabs {display:none !important; margin:0 !important;padding:0;}
+      .tab-labels {gap:0px; padding:.5vh 2vw; background-color:var(--drkblue); border-radius:5px;
+        cursor:pointer; transition:.4s;margin:0 !important; display: inline-block; margin-right: -1px;
+        box-shadow: 5px 5px 7px var(--darkcy),7px -7px 7px var(--darkcy) !important; border-bottom: 5px solid var(--darkblue) !important;}
+      .radio-tabs:checked + .tab-labels {background-color:var(--blue); color:var(--green); border-radius: 5px 5px 0 0 !important;}
+      #tab1:checked~#content1,#tab2:checked~#content2,#tab3:checked~#content3,#tab4:checked~#content4,#tab5:checked~#content5,
+        #tab6:checked~#content6,#tab7:checked~#content7,#tab8:checked~#content8,#tab9:checked~#content9
+         {display:block !important;}
+      /*find replace css*/
+      body::selection {background-color: var(--highlightbg)!important; color: var(--highlighttxt) !important;}
+      h1 {color:var(--theme-color)}
+      #outdisplay,#outdisplay2 {color: var(--theme-color); background: var(--black); padding: 10px; border: 1px solid var(--theme-color); margin-top:10px;}
+      input[type="text"]::placeholder{color: var(--theme-color) !important; opacity: 0.7; font-style: italic;}
+      input[type="text"] {width:90%; padding:10px; background-color:var(--black); color:var(--titleColor);}
+      #cssreverse,#cssConvert {width:90%; padding:10px; background-color:var(--black); color:var(--titleColor);}
+      /*textarea::placeholder{color: rgba(80, 221, 255,0.9) !important; opacity: 0.7; font-style: italic;}*/
+      #cssreverse::placeholder{color: var(--theme-color) !important; opacity: 0.7; font-style: italic;}
+      #cssConvert::placeholder{color: var(--theme-color) !important; opacity: 0.7; font-style: italic;}
+      #content2 {background-color:var(--bColor); overflow-y: scroll;}
+      .summary {border-bottom: 2px solid var(--theme-color); color:var(--theme-color);}
+      .summary2 {color:var(--theme-color);}
+      .ide_nums {overflow: hidden !important; padding: 9.5px 3.5px; color: var(--darkblue); text-align: right; font-family: monospace; border-right: 1px solid var(--clrbtnbc); user-select: none;}
+      .ide_nums:hover {background-color: var(--clrbtnbc); color:var(--theme-color);}
+      .ide_nums::-webkit-scrollbar-thumb {background: var(--theme-color);}
+      *::-webkit-scrollbar {color: var(--theme-color);}
+      .runTheCode {background: var(--savebtnbc); color: var(--savebtnTheme); border: 1px solid var(--savebtnTheme); padding: 10px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 10px;}
+      .codearea {width: 100%; min-height: 150px; height:auto; background: transparent; color: #0f0; border: none; padding: 10px; outline: none; resize: none; line-height: 1.5; font-family: monospace;}
+      textarea:focus{
+        outline: none;
+        border: 1px solid var(--theme-color);
+        box-shadow: 0 0 5px var(--theme-color), inset 1px 1px 18px var(--theme-color),inset -1px -1px 18px var(--theme-color) !important;
+      }
+      .drag-hover:hover {
+        background-color: var(--blue);
+        box-shadow: 0 0 15px var(--theme-color);
+      }
+      input[type="text"]:focus {
+        outline: none;
+        border: 1px solid var(--theme-color);
+        box-shadow: 0 0 5px var(--theme-color);
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: inset 1px 1px 10px rgba(0, 255, 0, 0.5), 0px 0px 5px rgba(0, 255, 0, 0.5) ;
+          border-color: #008800 ;
+        }
+        50% {
+          box-shadow: inset 1px 1px 20px rgba(0, 255, 0, 0.9), 0px 0px 20px rgba(0, 255, 0, 0.9) ;
+          border-color: #00FF00 ;
+        }
+        100% {
+          box-shadow: inset 1px 1px 10px rgba(0, 255, 0, 0.5), 0px 0px 5px rgba(0, 255, 0, 0.5) ;
+          border-color: #008800 ;
+        }
+      }
+      @keyframes flicker {
+        0% { opacity: 0.9; text-shadow: 2px 0 1px rgba(0,255,0,0.5); }
+        5% { opacity: 0.5; text-shadow: none; }
+        10% { opacity: 0.9; text-shadow: -2px 0 1px rgba(0,255,0,0.5); }
+        15% { opacity: 0.8; }
+        30% { opacity: 1; text-shadow: 2px 0 1px rgba(0,255,0,0.5); }
+        80% { opacity: 0.9; }
+        100% { opacity: 1; }
+      }
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--highlighttxt);  /* track color */
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--highlighttxt); /* draggable thumb color */
+  border-radius: 5px;
+  border: 1px solid #00ddff; /* optional: nicer edge */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--theme-color);  /* hover effect */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;       /* "auto", "thin", "none" */
+  scrollbar-color: var(--highlighttxt) var(--highlightbg); /* thumb color, track color */
+}
+.matrixCanvas {animation: pulse 2s infinite ease-in-out, flicker 0.15s infinite !important;}
+.retoQuery {
+    /* Layout & Colors */
+    background-color: #000000;      /* Pure black background */
+    color: #00ff41;                /* The classic Matrix green */
+    border: 1px solid #003b00;     /* Dark green border */
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace; /* Monospace is a must */
+    font-size: 16px;
+    width: 100%;                   /* Responsive */
+
+    /* The "Matrix" Glow */
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.2);
+    outline: none;                 /* Removes the browser's default blue focus ring */
+    transition: all 0.3s ease;
+}
+
+/* Hover/Focus effect */
+.retoQuery:focus {
+    border: 1px solid #00ff41;     /* Brighter border when typing */
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+}
+
+/* Style the placeholder text to be subtle */
+.retoQuery::placeholder {
+    color: #003b00;
+}
+.terminal-container {
+    display: flex;
+    align-items: center;
+    background: #000;
+    padding: 5px;
+    font-family: 'Courier New', monospace;
+}
+
+.prompt {
+    color: #00ff41;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+    </style>
+<body style="overflow:auto; width:1010px; margin:0;">
+  <dialog id="toasts" role="dialog" aria-labelledby="Toasts" aria-modal="true"
+        style="background: #0d0d0d; color: white; border: 2px solid #00ffcc; border-radius: 8px; width: 80%; max-height: 80vh; font-family: monospace;">
+        <h2 id="toastsbx" style="white-space: pre-wrap;">
+
+        </h2>
+        <form method="dialog">
+            <button style="background: #00ffcc; color: black; border: none; padding: 10px; width: 100%; cursor: pointer;">CLOSE_TOAST</button>
+        </form>
+    </dialog>
+<main style="overflow:auto; margin-left:0; width:1100px;">
+<details open class="details mainDetails" id="wrapper1" style="height:1000px; overflow:auto; width:100%;">
+<summary class="summary"><span>&lt;&gt;</span>display<span>&lt;/&gt;</span></summary>
+<section class="tabsy-face mainDetails" style="margin:1vh;">
+    <div style="background-color:var(--black); color:var(--theme-color); height:1.2vh;"></div>
+    <input type="radio" name="tabs" id="tab1" class="radio-tabs" checked>
+    <label for="tab1"  class="tab-labels"> tab 1</label>
+
+    <input type="radio" name="tabs" id="tab2" class="radio-tabs" >
+    <label for="tab2"  class="tab-labels"> tab 2</label>
+
+    <input type="radio" name="tabs" id="tab3" class="radio-tabs" >
+    <label for="tab3"  class="tab-labels"> tab 3</label>
+
+    <input type="radio" name="tabs" id="tab4" class="radio-tabs" >
+    <label for="tab4" class="tab-labels"> tab 4</label>
+
+    <input type="radio" name="tabs" id="tab5"  class="radio-tabs" >
+    <label for="tab5" class="tab-labels"> tab 5</label>
+
+    <input type="radio" name="tabs" id="tab6" class="radio-tabs">
+    <label for="tab6" class="tab-labels"> tab 6</label>
+
+    <input type="radio" name="tabs" id="tab7" class="radio-tabs">
+    <label for="tab7" class="tab-labels"> tab 7</label>
+
+    <input type="radio" name="tabs" id="tab8" class="radio-tabs">
+    <label for="tab8" class="tab-labels"> tab 8</label>
+
+    <input type="radio" name="tabs" id="tab9" class="radio-tabs">
+    <label for="tab9" class="tab-labels"> tab 9</label>
+    <button title="New tab: works best if opened before switching tabs" class="add-tab" style="margin-left:5px; background-color:cyan; color:#fff;" onclick="createNewTab()">+</button>
+
+<div class="tabs-content" id="content1">
+
+<details open class="details" id="pyCompiler">
+    <summary class="summary"><span>&lt;py-script&gt;</span><h2 style="display:inline-block;">Local Python Compiler</h2><span>&lt;/py-script&gt;</span></summary>
+    <details open class="details">
+      <summary class="summary"><small>&lt;py&gt;</small><h4 style="display:inline-block;">Py</h4><small>&lt;/py&gt;</small></summary>
+    <div style="display: flex; background: var(--saveThemeb); border: 1px solid var(--theme-color); margin-bottom: 10px;">
+<!--
+    <div id="line_numbers" class="ide_nums" ondblclick="runCode();">
+        1
+    </div>
+    <textarea id="code_input"
+              oninput="updateLineNumbers() " onkeydown="typing(event);" ondblclick="runCode();"
+              class="codearea" placeholder="Type Python code here..."></textarea>
+    -->
+    <samp style="min-width:1000px;" ondblclick="runCode();">
+      <div id="code_input" style="width: 100%; height: 500px; border: 1px solid #ccc;"></div>
+    </samp>
+    </div></details>
+    <button id="run_code_btn" onclick="runCode()" style="background: var(--theme-color); color: var(--black); border: none; padding: 10px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 10px;">
+        RUN CODE
+    </button>
+    <button id="clear_btn" onclick="clearOutput()" style="background: var(--clrbtnbc); color: var(--theme-color); border: 1px solid var(--theme-color); padding: 10px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 10px;">
+    CLEAR OUTPUT
+    </button><!---->
+    <!--------------------------------------------------------------------------------------------------------------------------------------------->
+    <p id="compiler_output">
+        Compiler Ready...
+    </p>
+ </details>
+ <details open style="background-color:var(--bColor)" id="pyCompiler2">
+    <summary class="summary2"><span>&lt;py-script&gt;</span><strong>Output</strong><span>&lt;/py-script&gt;</span></summary>
+    <py-config>
+      packages= ["numpy", "pandas","matplotlib","seaborn","scipy","sympy","requests","flask","simpleeval",
+       "micropip","keyboard","openpyxl",]
+      </py-config>
+    <script type="py">
+    from pyscript import display, when, window
+    # Run code on double click
+    global already_run
+    already_run = 0
+    @when("click", "#run_code_btn")#
+    def execute_user_code(event):
+        # 1. Use standard JS-style 'document' to get the value
+        # This replaces the old 'Element' method
+        #global already_run
+        #if already_run == 2:
+        #    return  # skip if already executed
+        editor = window.editorRegistry.code_input
+        #user_code = editor.getValue()
+
+        # The "Safe" way if you aren't sure text.value exists:
+        user_code = window.document.getElementById("code_input").value  if hasattr(window.document.getElementById("code_input"), 'value') and window.document.getElementById("code_input").value else editor.getValue()
+        # Run code on single click
+        # 2. Reset the output display
+        display("", target="compiler_output", append=False)
+        try:
+            #already_run += 1
+            exec(user_code)#, {}
+            # Call JS function for success
+            window.colorLog("\n  --- Execution Finished ---\n  displayed 2X? no worries\n  display duplication", "#00ff00")
+        except Exception as e:
+            # Call JS function for bugs (bright red)
+            window.colorLog(f"[BUG FOUND]: {str(e)}", "#ff4444")
+        finally:
+            already_run = 0
+    @when("dblclick", "#code_input")
+    def run_on_dblclick(event):
+        editor = window.editorRegistry.code_input
+        #user_code = editor.getValue()
+        # The "Safe" way if you aren't sure text.value exists:
+        user_code = window.document.getElementById("code_input").value  if hasattr(window.document.getElementById("code_input"), 'value') and window.document.getElementById("code_input").value else editor.getValue()
+        display("", target="compiler_output", append=False)
+        global already_run
+        if already_run == 1:
+            return
+        try:
+            already_run += 1
+            exec(user_code)
+            window.colorLog("\n  --- Executed via dblclick ---", "#00ff00")
+        except Exception as e:
+            # Call JS function for bugs (bright red)
+            window.colorLog(f"[BUG FOUND]: {str(e)}", "#ff4444")
+        finally:
+            already_run = 0
+    @when("click", "#download_btn") # Download button
+    def trigger_download(event):
+        window.downloadPyFile()
+    @when("click", "#clear_btn")
+    def clear_output(event):
+        global already_run
+        already_run = 0
+    </script>
+</details>
+</div>
+ <div class="tabs-content" id="content2">
+  <details open class="details">
+  <summary class="summary"><span>&lt;&gt;</span><h2 style="display:inline-block;">HTML CSS JS</h2><span>&lt;/&gt;</span></summary>
+  <div style="margin-top: 2px;">
+  <details open class="details">
+  <summary class="summary"><span>&lt;script&gt;</span><h2 style="display:inline-block;">web code</h2><span>&lt;/script&gt;</span></summary>
+    <div style="display: flex; background: var(--saveThemeb); border: 1px solid var(--theme-color); margin-bottom: 10px;">
+      <!--<div id="line_numbers2" class="ide_nums" ondblclick="runCode();">
+            1
+      </div>
+
+      <textarea id="jscode_input"
+                  oninput="updateLineNumbers2() " onkeydown="typing(event);" ondblclick="runWebCode();"
+                  class="codearea" placeholder="Type HTML/CSS/JS code here..."></textarea>-->
+        <samp style="min-width:1005px;">
+          <div id="jscode_input" style="width: 100%; height: 500px; border: 1px solid #ccc;"></div>
+        </samp>
+      </div></details>
+  <button id="rnwbcde" class="runTheCode" onclick="runWebCode()">runHTML_CSS_JS</button>
+  <button id="clear_btn2" onclick="clearOutput2()" style="background: var(--clrbtnbc); color: var(--theme-color); border: 1px solid var(--theme-color); padding: 10px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 10px;">
+    CLEAR OUTPUT
+    </button>
+    <details open class="details">
+      <summary style="color:var(--theme-color);"><span>&lt;html&gt;</span><h3 style="color: var(--theme-color); display:inline-block;">Live Preview %%</h3><span>&lt;/html&gt;</span></summary>
+        <iframe id="live_preview"
+                    style="width: 100%; height: 300px; background: white; border: 2px solid var(--theme-color);">
+        </iframe>
+    </details>
+   </div>
+ </details>
+</div>
+
+<div class="tabs-content" id="content3">
+  <details open class="details">
+    <summary class="summary"><span>&lt;&gt;</span><h2 style="display:inline-block;">Lua interpreter</h2><span>&lt;/&gt;</span></summary>
+    <details open class="details">
+     <summary class="summary"><span>&lt;script&gt;</span><h2 style="display:inline-block;">Lua code</h2><span>&lt;/script&gt;</span></summary>
+    <div style="display: flex; background: var(--saveThemeb); border: 1px solid var(--theme-color); margin-bottom: 10px;">
+    <!--<div id="line_numbers3" class="ide_nums" ondblclick="runCode();">
+        1
+    </div>
+    <textarea id="luacode_input"
+              oninput="updateLineNumbers3() " onkeydown="typing(event);" ondblclick="runLuaCode();"
+              style="width: 100%; min-height: 150px; background: transparent; color: #0f0; border: none; padding: 10px; outline: none; resize: none; line-height: 1.5; font-family: monospace;"
+              placeholder="Type Lua code here..."></textarea>-->
+    <samp style="min-width:1005px;">
+      <div id="luacode_input" style="width: 100%; height: 500px; border: 1px solid #ccc;"></div>
+    </samp>
+    </div></details>
+    <button id="run_lua_btn" onclick="runLuaCode()" style="background: var(--theme-color); color: var(--black); border: none; padding: 10px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 10px;">
+        RUN CODE
+    </button>
+    <button id="clear_lua_btn" onclick="clearLua()" style="background: var(--clrbtnbc); color: var(--theme-color); border: 1px solid var(--theme-color); padding: 10px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 10px;">
+    CLEAR OUTPUT
+    </button>
+  </details>
+  <details open style="background-color:var(--bColor)" id="luaCompiler2">
+    <summary class="summary2"><span>&lt;fengari&gt;</span><strong>Lua Output</strong><span>&lt;/fengari&gt;</span></summary>
+  </details>
+</div>
+<div class="tabs-content" id="content4">
+  <details open class="details">
+  <summary class="summary"><span>&lt;&gt;</span><h2 style="display:inline-block;">SQLlite</h2><span>&lt;/&gt;</span></summary>
+    <details open class="details">
+    <summary class="summary"><span>&lt;script&gt;</span><h2 style="display:inline-block;">SQLite</h2><span>&lt;/script&gt;</span></summary>
+    <div style="display: flex; background: var(--saveThemeb); border: 1px solid var(--theme-color); margin-bottom: 10px; ">
+    <!--<div id="line_numbers4" class="ide_nums"  ondblclick="runCode();">
+        1
+    </div>
+
+  <textarea id="sqllite_input"
+              oninput="updateLineNumbers4() " onkeydown="typing(event);" ondblclick="runSqlCode();"
+              class="codearea"  placeholder="Type SQLite code here..."></textarea> -->
+    <samp style="min-width:1005px;">
+      <div id="sqllite_input" style="width: 100%; height: 500px; border: 1px solid #ccc;"></div>
+    </samp>
+    </div></details>
+    <fieldset style="border: 1px solid var(--darkblue); padding: 10px; margin-bottom: 20px;">
+        <legend style="color: var(--green); padding: 0 5px;">
+            🔍 Query / Analytics / Database
+            <details contentEditable="true" style="background-color:var(--bColor); margin-top: 10px; width: 100%">
+            <summary style="color: var(--green);"><span>&lt;sqlite&gt;</span><strong> Tips</strong></summary>
+            <p contentEditable="true">
+              <strong>DDL (Data Definition): The blueprint.</strong>
+              <br>
+              <strong>CREATE TABLE, DROP TABLE, ALTER TABLE, ADD, DATABASE</strong><hr>
+              <strong>DML (Data Manipulation): The intake.</strong><br>
+
+              INSERT INTO, UPDATE, SET, DELETE<hr>
+              <strong>DQL (Data Querying): The retrieval (90% of your work).</strong><br>
+
+              SELECT, FROM, WHERE, ORDER, BY, ASC, DESC, BETWEEN, HAVING, DISTINCT, DELETE, LIMIT, AS, ON, GROUP<hr>
+              <strong>KEYS</strong><br>
+              PRIMARY KEY, FOREIGN KEY, UNIQUE, (REFERENCES used with foreign keys) <hr>
+              <strong>Relational Logic: The connections.</strong><br>
+
+              JOIN (The glue), INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN
+              <h3>Advanced</h3>
+              <strong>Remove Duplicates:</strong> <br>DELETE FROM table_name WHERE id NOT IN (SELECT MIN(id) FROM table_name GROUP BY column_to_check);<hr>
+              <strong>Check for Empty Values:</strong><br> SELECT * FROM table_name WHERE column_name IS NULL OR column_name = '';<br>
+              <hr>
+              <strong>Rename/Modify Columns:</strong> ALTER TABLE table_name RENAME COLUMN old_name TO new_name;<br>
+              <hr>
+              <strong>Group & Count:</strong><br> SELECT era, COUNT(*) as total_count FROM music_facts GROUP BY era ORDER BY total_count DESC;<br>
+              <hr>
+              <strong>Filter Aggregates:</strong><br> SELECT era, AVG(difficulty_level) FROM music_facts GROUP BY era HAVING AVG(difficulty_level) > 7;<br>
+              <hr>
+              <strong>The "Relational Link":</strong><br> SELECT m.concept, c.composer FROM music_facts m JOIN composers c ON m.composer_id = c.id;<hr>
+              <strong>sql functions (aggregates):</strong> <br>SUM(), AVG(), MIN(), MAX(), COUNT() <hr>
+              <strong>Conditionals:</strong><br>
+              IF, CASE, WHEN, THEN, ELSE, END<br>
+              ALL, ANY, EXSISTS, IN, AND, NOT,OR, LIKE, IN, IS NULL, IS NOT NULL<br>
+              <hr>
+              <b> LIKE '%str%'</b>
+              <br> This is similar to regex as it compares it for simiarities before % content and after % content.
+              <br>
+              <strong>links for  -> </strong>
+              <a contentEditable="false" href="https://www.w3schools.com/sql/default.asp" target="_blank">w3Schools_tutorial</a>
+            </p>
+        </details>
+        </legend>
+
+        <div class="terminal-container">
+            <span class="prompt">Query:~$</span>
+            <input type="text" id="sql_query_input" class="retoQuery" placeholder="SELECT * FROM *">
+        </div>
+    </fieldset>
+    <button id="sql_btn" onclick="runSqlCode()" style="background: var(--theme-color); color: var(--black); border: none; padding: 10px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 10px;">
+        RUN CODE
+    </button>
+    <button id="clear_sql_btn" onclick="clearsql()" style="background: var(--clrbtnbc); color: var(--theme-color); border: 1px solid var(--theme-color); padding: 10px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 10px;">
+    CLEAR OUTPUT
+    </button>
+    <details open style="background-color:var(--bColor)" id="sqlCompilerOutput">
+    <summary class="summary2"><span>&lt;sqlite&gt;</span><strong>Database Results</strong><span>&lt;/sqlite&gt;</span></summary>
+      <details open style="background-color:var(--bColor); margin-top: 10px;">
+          <summary style="color:orange;"><span>&lt;sqlite&gt;</span><strong> Active Tables (Click to Drop)</strong></summary>
+          <div id="active_tables_list" style="padding: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+            <p id="compiler_output4">
+                    Compiler Ready...
+                </p>
+              </div>
+      </details>
+      <div id="sql_table_display" style="padding: 10px; overflow-x: auto;"></div>
+
+    </details>
+</details>
+</div>
+<div class="tabs-content" id="content5">
+  <details open class="details">
+  <summary class="summary"><span>&lt;&gt;</span><h2 style="display:inline-block;">Find and Replace</h2><span>&lt;/&gt;</span></summary>
+  <div style="margin: 20px 0; border: 1px dashed var(--theme-color); padding: 15px; background-color: var(--black);">
+    <h3 style="color: var(--theme-color);">Custom Replacer</h3>
+    <input type="text" id="findText" placeholder="Find this..." style="width: 38%;">
+    <input type="text" id="replaceWith" placeholder="Replace with..." style="width: 38%;">
+    <button onclick="customReplace()" style="background: var(--theme-color); color: var(--black); border: none; padding: 10px; cursor: pointer;">RUN CUSTOM</button>
+      </div>
+      <div style="background-color:var(--bColor);">
+      <h1>{{}} to {} or {} to {{}}</h1>
+      <textarea  id="cssConvert" placeholder="Paste code with {{}} here..."></textarea>
+      <p id="outdisplay">output</p>
+      <button class="copy-icon-btn1" onclick="copyAccountingData()">
+              📋
+          </button>
+      <button onclick="customReplace2()" style="background-color: var(--theme-color); color: var(--black); border: none; padding: 10px; cursor: pointer;">reset</button><hr>
+      <textarea  id="cssreverse" placeholder="Paste code with {} here..."></textarea>
+      <p id="outdisplay2">output2</p>
+      <button class="copy-icon-btn2" onclick="copyAccountingData2()">
+              📋
+          </button><button onclick="customReplace3()" style="background-color: var(--theme-color); color: var(--black); border: none; padding: 10px; cursor: pointer;">reset</button>
+          <button onclick="customReplace4()" style="background-color: var(--theme-color); color: var(--black); border: none; padding: 10px; cursor: pointer;">clear</button><hr>
+      </div>
+    <input type="color" value="#ffffff"></input>
+  </details>
+
+  <details open> <!-- allow-same-origin -->
+    <summary><a style="display:inline-block" href="https://play.kotlinlang.org/#eyJ2ZXJzaW9uIjoiMi4zLjIxIiwicGxhdGZvcm0iOiJqYXZhIiwiYXJncyI6IiIsIm5vbmVNYXJrZXJzIjp0cnVlLCJ0aGVtZSI6ImlkZWEiLCJjb2RlIjoiLyoqXG4gKiBZb3UgY2FuIGVkaXQsIHJ1biwgYW5kIHNoYXJlIHRoaXMgY29kZS5cbiAqIHBsYXkua290bGlubGFuZy5vcmdcbiAqL1xuZnVuIG1haW4oKSB7XG4gICAgcHJpbnRsbihcIkhlbGxvLCB3b3JsZCEhIVwiKTtcbn0ifQ=="   target="mediaLoader"><h3>Sovereign Kotlin Workspace</h3></a></summary>
+    <iframe src="" height="900px" width="100%" id="mySandboxIframe"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      sandbox="allow-forms allow-scripts allow-modals allow-pointer-lock  allow-popups allow-presentation"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture
+                      frameborder="0"
+                      name="mediaLoader"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      fetchpriotity="low"
+                      loading='lazy'
+                      allowfullscreen="true"></iframe>
+  </details>
+</div>
+<div class="tabs-content" id="content6">
+  <details open class="details">
+  <summary class="summary"><span>&lt;&gt;</span><h2 style="display:inline-block;">content</h2><span>&lt;/&gt;</span></summary>
+  <div id="terminal_container" class="matrixCanvas" style="background:#000; padding:15px; font-family:monospace; min-height:300px; border:1px solid var(--darkblue);">
+    <div id="terminal_history" style="color:#0f0; margin-bottom:10px; height:250px; overflow-y:auto;">
+      Welcome to Gemini-IDE Terminal... Type 'help' to begin.
+    </div>
+    <div style="display:flex;">
+      <span style="color:#0f0;">user@colab:~$ &nbsp;</span>
+      <input type="text" id="terminal_input" onkeydown="handleTerminal(event)"
+             style="background:transparent; border:none; color:#fff; outline:none; width:80%;">
+  </div>
+</div>
+</details>
+</div>
+<div class="tabs-content" id="content7">
+  <details open class="details">
+  <summary class="summary"><span>&lt;&gt;</span><h2 style="display:inline-block;">content</h2><span>&lt;/&gt;</span></summary>
+  <textarea id="markdown_input" placeholder="Write README here..." oninput="renderMarkdown()"
+            style="width:100%; height:150px; background:var(--black); color:var(--theme-color); border:1px solid var(--darkblue);"></textarea>
+  <div id="markdown_render" style="padding:15px; background:var(--bColor); border-top:1px solid var(--darkblue); min-height:100px;">
+    Preview will appear here...
+</div>
+</details>
+</div>
+<div class="tabs-content" id="content8" style="padding: 20px; color: var(--green);">
+  <details open class="details">
+  <summary class="summary"><span>&lt;&gt;</span><h2 style="display:inline-block;">content</h2><span>&lt;/&gt;</span></summary>
+    <h2 style="color: var(--theme-color); border-bottom: 1px solid var(--darkblue);">System Health Dashboard</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+        <div style="border: 1px solid var(--darkblue); padding: 15px; background: rgba(0,0,0,0.3);">
+            <h3 style="margin-top:0;">📝 IDE Productivity</h3>
+            <div id="health_stats">Loading vitals...</div>
+        </div>
+        <div style="border: 1px solid var(--darkblue); padding: 15px; background: rgba(0,0,0,0.3);">
+            <h3>💾 Local Cache</h3>
+            <div id="storage_bar_container" style="width: 100%; background: #222; height: 20px; border-radius: 10px;">
+                <div id="storage_bar" style="width: 0%; background: var(--theme-color); height: 100%; border-radius: 10px; transition: width 0.5s;"></div>
+            </div>
+            <p id="storage_text" style="font-size: 12px; margin-top: 5px;">0% of 5MB Used</p>
+        </div>
+      </div>
+    <button class="runTheCode" onclick="updateSystemHealth()" style="margin-top: 20px; width: 200px;">🔄 Refresh Diagnostics</button>
+    <div onclick="updateSaveTimestamp()" style="border: 1px solid var(--darkblue); padding: 15px; background: rgba(0,0,0,0.3); grid-column: span 2;">
+      <h3 style="margin:0; color:var(--theme-color);">🛡️ Persistence Status</h3>
+      <p id="last_saved_display" style="font-family: monospace; font-size: 14px;">Last sync: Never (Session is volatile)</p>
+    </div>
+    <button class="runTheCode" onclick="downloadSystemReport()" style="margin-top: 10px; border-color: var(--green); color: var(--green);">
+    📥 Download System Report
+    </button>
+    <details class="details">
+      <summary class="summary2">code snipets</summary>
+      <h2 style="color: var(--theme-color); border-bottom: 1px solid var(--darkblue);">📚 Snippet Library</h2>
+
+    <div style="background: rgba(0,0,0,0.3); padding: 15px; border: 1px solid var(--darkblue); margin-bottom: 20px;">
+        <div style="margin-bottom: 15px;">
+            <input type="text" id="snippet_search" oninput="filterSnippets()" placeholder="🔍 Search snippets by title..."
+                  style="width: 100%; padding: 8px; background: rgba(0,0,0,0.5); border: 1px solid var(--theme-color); color: white;">
+        </div>
+        <input type="text" id="snippet_title" placeholder="Snippet Title (e.g. SQL Create Table)" style="margin-bottom:10px;">
+        <textarea id="snippet_code" placeholder="Paste code here..." style="width:100%; height:100px; background:var(--black); color:var(--green); border:1px solid var(--darkblue); font-family:monospace;"></textarea>
+        <button class="runTheCode" onclick="saveSnippet()" style="margin-top:10px; width:auto; padding: 10px 30px;">
+            💾 Save Snippet
+        </button>
+    </div>
+
+    <div id="snippet_list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        </div>
+    </details>
+    <details class="details">
+    <summary class="summary">
+      <span>&lt;&gt;</span><h2 style="display:inline-block;">Install libraries</h2><span>&lt;/&gt;</span>
+      </summary>
+        <div id="plugin-manager" class="tab-content">
+            <h2 style="color: var(--theme-color); text-shadow: 0 0 10px var(--theme-color);">🔌 Modular Engine Loader</h2>
+            <p style="color: #ccc; font-size: 0.9em;">Inject external WASM libraries to expand IDE capabilities.</p>
+
+            <div class="input-group" style="margin-top: 20px;">
+                <label style="display: block; margin-bottom: 8px; color: var(--theme-color);">Library CDN / URL:</label>
+                <input type="text" id="lib-url" placeholder="https://cdn.jsdelivr.net/npm/rust-wasm-library..."
+                      style="width: 80%; padding: 10px; background: #001220; border: 1px solid var(--theme-color); color: white; border-radius: 4px;">
+            </div>
+
+            <div class="input-group" style="margin-top: 15px;">
+                <label style="display: block; margin-bottom: 8px; color: var(--theme-color);">Target Language Alias:</label>
+                <input type="text" id="lib-alias" placeholder="e.g., Rust, C++, Go"
+                      style="width: 40%; padding: 10px; background: #001220; border: 1px solid var(--theme-color); color: white; border-radius: 4px;">
+            </div>
+
+            <button id="load-plugin" style="margin-top: 20px; padding: 10px 25px; background: transparent; border: 2px solid var(--savebtnTheme); color: var(--savebtnTheme); cursor: pointer; font-weight: bold; text-transform: uppercase;">
+                ⚡ Inject Library
+            </button>
+
+            <hr style="margin-top: 30px; border: 0.5px solid #333;">
+
+            <h3 style="color: var(--green);">Active Plugins:</h3>
+            <ul id="active-plugin-list" style="list-style: none; padding: 0; color: #aaa;">
+                <li>✔️ Python 3.12 (Native)</li>
+                <li>✔️ Lua 5.3 (Native)</li>
+                <li>✔️ SQLite 3 (Native)</li>
+            </ul>
+        </div>
+      </details>
+</details>
+</div>
+
+<div class="tabs-content" id="content9">
+  <details open class="details">
+    <summary class="summary">
+      <span>&lt;&gt;</span><h2 style="display:inline-block;">IDE Settings & Management</h2><span>&lt;/&gt;</span>
+    </summary>
+
+    <div style="padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+
+      <h3 style="color: var(--theme-color); margin-bottom: 5px;">File Exports</h3>
+      <button onclick="downloadPyFile()" class="runTheCode" style="color: #ff00ff; border-color: #ff00ff;">DOWNLOAD PY_code AS .PY</button>
+
+      <div style="border: 1px solid var(--theme-color); padding: 10px; border-radius: 5px;">
+        <input type="text" id="web_filename" placeholder="Enter filename (e.g., project1)"
+               style="background: transparent; border: none; width: 100%; margin-bottom: 10px; color: var(--theme-color);">
+        <button onclick="downloadWebProject()" class="runTheCode" style="color: #ff00ff; border-color: #ff00ff; margin-bottom: 0;">DOWNLOAD HTML/CSS/JS_code AS .HTML</button>
+      </div>
+      <button onclick="downloadSqlDb()" class="runTheCode" style="color: #ff00ff; border-color: #ff00ff;">
+          DOWNLOAD SQL DATABASE (.DB)
+      </button>
+      <h3 style="color: var(--theme-color); margin-top: 10px; margin-bottom: 5px;">Session Control</h3>
+      <button id="saveSession" onclick="saveCurrentSession()" class="runTheCode" style="color: #00ff00; border-color: #00ff00;">MANUAL SAVE SESSION</button>
+      <button onclick="resetToLastSave()" class="runTheCode" style="color: orange; border-color: orange;">⏪ RESET TO LAST SAVE</button>
+
+      <h3 style="color: #ff4444; margin-top: 10px; margin-bottom: 5px;">Danger Zone</h3>
+      <button onclick="clearAllStorage()" class="runTheCode" style="background: #300; color: #ff4444; border-color: #ff4444;">🔥 FACTORY RESET (CLEAR ALL)</button>
+
+    </div>
+  </details>
+</div>
+<!---->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+</details>
+<script>
+  const pycode = document.getElementById("code_input");
+  const empty = document.getElementById("empty");
+  const jscode = document.getElementById("jscode_input");
+  const lineNumbers = document.getElementById("line_numbers");
+  const luaCode = document.getElementById("luacode_input");
+  const sqlCode = document.getElementById("sqllite_input");
+  const outpt = document.getElementById("compiler_output");
+  const outpt2 = document.getElementById("compiler_output2");
+  const outpt3 = document.getElementById("compiler_output3");
+  const outpt4 = document.getElementById("compiler_output4");
+  const history = document.getElementById("terminal_history");
+  const terminalInput = document.getElementById("terminal_input");
+  const markdownInput = document.getElementById("markdown_input");
+  const markdownRender = document.getElementById("markdown_render");
+  const storageBarContainer = document.getElementById("storage_bar_container");
+  const storageBar = document.getElementById("storage_bar");
+  const rnbtntxt = "RUN CODE";
+  const jsbuttontxt = "runHTML_CSS_JS";
+  let space = "    ";
+  let enter = "\n";
+  const trmnl = space + 'Compiler Ready...';
+  window.editorRegistry = {};
+//____________________________________________________________________________________________
+function clearOutput() {
+    // List the IDs that Colab tends to cycle through
+    const possibleIds = ["py-0", "py-1", "py-2", "py-3"];
+    let success = false;
+
+    for (let id of possibleIds) {
+        try {
+            const target = document.getElementById(id);
+            if (target) {
+                // If it finds the ID, do the work and stop the loop
+                target.innerHTML = "<div id='empty'></div>";
+                document.getElementById("compiler_output").innerHTML = "<br>    Compiler Ready...";
+                const empty = document.getElementById("empty");
+                // Visual Signal: All caps means it used the 'Try-Catch' logic
+                document.getElementById("empty").innerHTML = '<h1>CLEARING ' + id + '...</h1>';
+
+                setTimeout(() => {
+                    const msg = document.getElementById('empty');
+                    if (msg) msg.innerHTML = "";
+                }, 500);
+
+                success = true;
+                break;
+            }
+        } catch (e) {
+            // Silently fail and try the next ID in the list
+            continue;
+        }
+    }
+
+    if (!success) {
+      const errorMsg = "None of the IDs (py-0 to py-3) were found.";
+      history.innerHTML += `<div style="color:red;">[CRITICAL]: ${errorMsg} Type 'report ID-FAIL | auto-loop failed' to log this.</div>`;
+    return empty;
+}}
+function notifyUser(msg) {
+   const toasts = document.getElementById('toasts');
+   const toastsbx = document.getElementById('toastsbx');
+   toastsbx.textContent = msg;
+   toasts.showModal();
+}
+function runCode() {console.log("running...")};
+function clearOutput2() {document.getElementById("jscode_input").value = "";}
+function typing(event) {
+if (event.key !== 'Enter') {const output = document.getElementById("compiler_output");
+  output.innerText = ` ${enter}${space}${trmnl}${event.key}`;
+  document.getElementById("rnwbcde").innerText = `${jsbuttontxt} ${enter}${space}${trmnl}${event.key}`;
+  document.getElementById("run_lua_btn").innerText = `${rnbtntxt} ${enter}${space}${trmnl}${event.key}`;
+  document.getElementById("compiler_output4").innerText = `${rnbtntxt} ${enter}${space}${trmnl}${event.key}`;
+} else {outpt.innerText = ""; document.getElementById("rnwbcde").innerText = `${jsbuttontxt}`; document.getElementById("run_lua_btn").innerText = `${rnbtntxt}`; document.getElementById("compiler_output4").innerText = `${rnbtntxt}`;}};
+function typingPy(event) { if (event.key === 'Enter') { runCode(); execute_user_code(event);}};
+function typingJs(event) { if (event.key === 'Enter') { runWebCode(); }};
+function typingLua(event) { if (event.key === 'Enter') { runLuaCode(); }};
+function typingSql(event) { if (event.key === 'Enter') { runSqlCode(); }};
+//____________________________________________________________________________________________
+//-----------------------------------------------------------------------
+function colorLog(msg, color, id="compiler_output") {
+  const output = document.getElementById(`${id}`);
+  if (!output) {
+        console.warn(`Element with ID '${id}' not found. Logging to console instead.`);
+        console.log(`[LOG]: ${msg}`);
+        return;
+    }
+  // 1. Create a new div element safely
+  const newDiv = document.createElement("div");
+
+  // 2. Add your text securely (this blocks all HTML injection!)
+  newDiv.textContent = msg;
+
+  // 3. Apply your styling
+  newDiv.style.color = color;
+  newDiv.style.fontWeight = "bold";
+  newDiv.style.whiteSpace= "pre-wrap";
+  // 4. Add it to the screen
+  output.appendChild(newDiv);
+}/* XSS vulnerable
+function colorLog(msg, color) {
+    const output = document.getElementById("compiler_output");
+    // This allows us to inject actual HTML into the div
+    output.innerHTML += `<div style="color:${color}; font-weight:bold;">${msg}</div>`;
+}
+function colorLog2(msg, color) {
+    const output = outpt4;
+    // This allows us to inject actual HTML into the div
+    output.innerHTML += `<div style="color:${color};<br> font-weight:bold;">${msg}</div>`;
+}*/
+function downloadPyFile() {
+    const code = document.getElementById("code_input").value;
+    const blob = new Blob([code], { type: "text/x-python" });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "accounting_script.py";
+    a.click();
+    window.URL.revokeObjectURL(url);
+}
+function updateLineNumbers() {
+    const textarea = document.getElementById('code_input');
+    const lineNumbers = document.getElementById('line_numbers');
+    textarea.style.height = 'auto';
+    //textarea.style.height = textarea.scrollHeight + 'px';
+    // --------------------------------------------------
+    // Split text by newlines and count them
+    const lines = textarea.value.split('\n').length;
+
+    // Create the number string (1, 2, 3...)
+    let numberString = '';
+    for (let i = 1; i <= lines; i++) {
+        numberString += i + '<br>';
+    }
+    lineNumbers.style.overflow = 'scroll';
+    lineNumbers.innerHTML = numberString;
+}
+function updateLineNumbers2() {
+    const textarea = document.getElementById('jscode_input');
+    const lineNumbers = document.getElementById('line_numbers2');
+    textarea.style.height = 'auto';
+    // Split text by newlines and count them
+    const lines = textarea.value.split('\n').length;
+
+    // Create the number string (1, 2, 3...)
+    let numberString = '';
+    for (let i = 1; i <= lines; i++) {
+        numberString += i + '<br>';
+    }
+    lineNumbers.style.overflow = 'scroll';
+    lineNumbers.innerHTML = numberString;
+}
+function updateLineNumbers3() {
+    const textarea = document.getElementById('luacode_input');
+    const lineNumbers = document.getElementById('line_numbers3');
+    textarea.style.height = 'auto';
+    //textarea.style.height = textarea.scrollHeight + 'px';
+    // --------------------------------------------------
+    // Split text by newlines and count them
+    const lines = textarea.value.split('\n').length;
+
+    // Create the number string (1, 2, 3...)
+    let numberString = '';
+    for (let i = 1; i <= lines; i++) {
+        numberString += i + '<br>';
+    }
+    lineNumbers.style.overflow = 'scroll';
+    lineNumbers.innerHTML = numberString;
+}
+function updateLineNumbers4() {
+    const textarea = document.getElementById('sqllite_input');
+    const lineNumbers = document.getElementById('line_numbers4');
+    textarea.style.height = 'auto';
+    //textarea.style.height = textarea.scrollHeight + 'px';
+    // --------------------------------------------------
+    // Split text by newlines and count them
+    const lines = textarea.value.split('\n').length;
+
+    // Create the number string (1, 2, 3...)
+    let numberString = '';
+    for (let i = 1; i <= lines; i++) {
+        numberString += i + '<br>';
+    }
+    lineNumbers.style.overflow = 'scroll';
+    lineNumbers.innerHTML = numberString;
+}
+//HTML-CSS-JS--runner------------------------------------------------------------------
+function runWebCode() {
+    // 1. Target the elements (using the IDs we set above)
+    const codeBox = document.getElementById("jscode_input");
+    const previewFrame = document.getElementById("live_preview").contentWindow.document;
+
+    // 2. Inject the code into the iframe
+    previewFrame.open();
+    previewFrame.write(codeBox.value || editorRegistry['jscode_input'].getValue());
+    previewFrame.close();
+
+    console.log("Web Preview Updated!");
+}
+// save web code as html file
+function downloadWebProject() {
+    // 1. Get the code from the web editor textarea
+    const code = document.getElementById("jscode_input").value || editorRegistry['jscode_input'].getValue();
+    let fileName = document.getElementById("web_filename").value.trim();
+    // 2. Create a Blob (a file-like object) with the code
+    const blob = new Blob([code], { type: "text/html" });
+    if (!fileName) {
+        fileName = "web_project.html";
+    }
+    // 3. Create a temporary link element to trigger the download
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    // link.download = "web_project.html";
+    link.download = fileName + ".html"; // The default filename
+
+    // 4. Trigger the download and clean up
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+
+    console.log("Web project downloaded as .html");
+}
+//find-and-replace-js-logic------------------------------------------------------------
+  const inputcss = document.getElementById("cssConvert");
+  const output = document.getElementById("outdisplay");
+  const inputcss2 = document.getElementById("cssreverse");
+  const output2 = document.getElementById("outdisplay2");
+inputcss.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter' || e.keyCode === 13) {
+    try {
+      let rawtext = inputcss.value;
+      let converted = rawtext.replace(/\{\{/g, '{').replace(/\}\}/g, '}\n').replace('   ', '\n')
+      output.innerHTML = converted;
+    } catch (err) {
+      // Display error if the input is invalid
+      output.innerHTML = `<span style="color:red;">Invalid Expression</span>`;
+    }
+  }
+});
+inputcss2.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter' || e.keyCode === 13) {
+    try {
+      let rawtext2 = inputcss2.value;
+      let converted2 = rawtext2.replace(/\{/g, '{{').replace(/\}/g, '}}\n').replace('   ', '\n')
+      output2.innerHTML = converted2;
+    } catch (err) {
+      // Display error if the input is invalid
+      output2.innerHTML = `<span style="color:red;">Invalid Expression</span>`;
+    }
+  }
+});
+function copyAccountingData() {
+    // Select the text inside the code tag
+    const textToCopy = document.getElementById("outdisplay").innerText;
+    // Use the browser's clipboard API
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        // Optional: Change button text temporarily for feedback
+        const btn = document.querySelector(".copy-icon-btn");
+        const originalIcon = btn.innerText;
+        btn.innerText = "✅";
+
+        setTimeout(() => {
+            btn.innerText = originalIcon;
+        }, 2000);
+    }).catch(err => {
+        console.error("Failed to copy: ", err);
+    });
+}
+function copyAccountingData2() {
+    // Select the text inside the code tag
+    const textToCopy2 = document.getElementById("outdisplay2").innerText;
+    // Use the browser's clipboard API
+    navigator.clipboard.writeText(textToCopy2).then(() => {
+        // Optional: Change button text temporarily for feedback
+        const btn = document.querySelector(".copy-icon-btn");
+        const originalIcon = btn.innerText;
+        btn.innerText = "✅";
+        setTimeout(() => {
+            btn.innerText = originalIcon;
+        }, 2000);
+    }).catch(err => {
+        console.error("Failed to copy: ", err);
+    });
+}
+function customReplace() {
+  const findVal = document.getElementById('findText').value;
+  const replaceVal = document.getElementById('replaceWith').value;
+  const mainInput = document.getElementById('cssConvert'); // Pulls from your top box
+  const output = document.getElementById('outdisplay');
+
+  if (findVal === "") return; // Don't run if empty
+
+  // Use a Regex with 'g' to replace ALL instances found in the code
+  const escapedFind = findVal.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escapes special chars
+  const regex = new RegExp(escapedFind, 'g');
+
+  const newContent = mainInput.value.replace(regex, replaceVal);
+  output.innerText = newContent;
+
+  // Visual feedback
+  output.style.borderColor = "#00ff00";
+  setTimeout(() => { output.style.borderColor = "cyan"; }, 500);
+}
+function customReplace2() {
+   const output = document.getElementById("outdisplay");
+   try {output.innerHTML = "output";}
+   catch (err) { output.innerHTML = `<span style="color:red;">Invalid Expression</span>`;}};
+function customReplace3() {
+      const output2 = document.getElementById("outdisplay2");
+      try {output2.innerHTML = "output2";}
+      catch (err) { output2.innerHTML = `<span style="color:red;">Invalid Expression</span>`;}};
+function customReplace4() {
+      const findVal = document.getElementById('findText');
+      const replaceVal = document.getElementById('replaceWith');
+      const inputcss = document.getElementById("cssConvert");
+      const output = document.getElementById("outdisplay");
+      const inputcss2 = document.getElementById("cssreverse");
+      const output2 = document.getElementById("outdisplay2");
+      try {
+        findVal.value=""
+        replaceVal.value=""
+        inputcss.value=""
+        output.value=""
+        output2.value=""
+        inputcss2.value=""
+        output.innerHTML = "output";
+        output2.innerHTML = "output2";}
+      catch {
+        output.innerHTML = `<span style="color:red;">Invalid Expression</span>`;
+      }
+    };
+//-------------------------------------------------------------------------------------
+//-lua-runner--------------------------------------------------------------------------
+/* default runner print -> f12 console
+function runLuaCode() {
+    const code = document.getElementById("luacode_input").value || editorRegistry['luacode_input'].getValue(); // Fixed ID
+    const { L, lua, lauxlib, lualib } = fengari;
+    const currentState = lauxlib.luaL_newstate();
+    lualib.luaL_openlibs(currentState);
+
+    if (lauxlib.luaL_dostring(currentState, fengari.to_luastring(code)) !== 0) {
+        window.colorLog("Lua Error: " + fengari.to_jsstring(lua.lua_tostring(currentState, -1)), "red");
+    } else {
+        window.colorLog("Lua Executed Successfully!", "#00ff00");
+    }
+}*/
+//-print-redirected-to-output
+function runLuaCode() {
+    const code = document.getElementById("luacode_input").value  || editorRegistry['luacode_input'].getValue();
+    const outputArea = document.getElementById("luaCompiler2"); // Target your specific div
+    const { L, lua, lauxlib, lualib } = fengari;
+    const currentState = lauxlib.luaL_newstate();
+    lualib.luaL_openlibs(currentState);
+
+    // 1. Create a custom print function for Lua
+    const luaPrint = function(L) {
+        const str = fengari.to_jsstring(lua.lua_tostring(L, 1));
+
+        // Create a new div for the message to keep it organized
+        const logEntry = document.createElement("div");
+        logEntry.style.color = "var(--theme-color)";
+        logEntry.style.fontFamily = "monospace";
+        logEntry.style.padding = "2px 10px";
+        logEntry.innerText = str;
+
+        outputArea.appendChild(logEntry); // Send to <details id="luaCompiler2">
+        return 0;
+    };
+
+    // 2. Register the print function in the Lua state
+    lua.lua_register(currentState, fengari.to_luastring("print"), luaPrint);
+
+    // 3. Run the code
+    if (lauxlib.luaL_dostring(currentState, fengari.to_luastring(code)) !== 0) {
+        const errorMsg = fengari.to_jsstring(lua.lua_tostring(currentState, -1));
+        const errorDiv = document.createElement("div");
+        errorDiv.style.color = "var(--red)";
+        errorDiv.innerText = "Lua Error: " + errorMsg;
+        outputArea.appendChild(errorDiv);
+    }
+}
+function clearLua() {
+    //document.getElementById("luacode_input").value = "";
+    document.getElementById("luaCompiler2").innerHTML = "<summary style='color:var(--theme-color);'><span>&lt;fengari&gt;</span><strong>Lua Output</strong><span>&lt;/fengari&gt;</span></summary>";
+}
+//-sqlLite-runner-----------------------------------------------------------------------
+/* test code sql
+CREATE TABLE IF NOT EXISTS test_table (id INTEGER, name TEXT);
+INSERT INTO test_table VALUES (1, 'First Entry');
+SELECT * FROM test_table;
+DROP TABLE test_table ;
+*/
+let queryHistory = ['SELECT * FROM '];
+let queryIndex = -1;
+document.getElementById("sql_query_input").addEventListener("keydown", async function (e) {
+    // 1. Handle Enter Key _enter
+    if (e.key === 'Enter' || e.keyCode === 13) {
+        const query = this.value;
+        if (!query.trim()) return;
+
+        if (typeof db === 'undefined') await initDatabase();
+        const data = db.exec(query);
+        renderResultsToTable(data);
+        window.colorLog(`> Executing: ${query}`, "var(--green)", "compiler_output4");
+
+        queryHistory.push(query);
+        queryIndex = -1; // Reset history index
+        this.value = "";
+    }
+    // 2. Handle Arrow Up
+    else if (e.key === "ArrowUp") {
+        e.preventDefault(); // STOP cursor from moving
+        if (queryIndex < queryHistory.length - 1) {
+            queryIndex++;
+            this.value = queryHistory[queryHistory.length - 1 - queryIndex];
+        }
+    }
+    // 3. Handle Arrow Down
+    else if (e.key === "ArrowDown") {
+        e.preventDefault(); // STOP cursor from moving
+        if (queryIndex > 0) {
+            queryIndex--;
+            this.value = queryHistory[queryHistory.length - 1 - queryIndex];
+        } else {
+            queryIndex = -1;
+            this.value = "";
+        }
+    }
+});
+function renderResultsToTable(final_results, id="sql_table_display") {
+  const tableDisplay = document.getElementById(id);
+  if (!tableDisplay) return; // Safety check: ensures the element exists
+  tableDisplay.innerHTML = "";
+  try {
+          final_results.forEach(res => {
+              let table = "<table style='width:100%; border-collapse: collapse; color:var(--green); border: 1px solid var(--darkblue);'>";
+              table += "<tr>" + res.columns.map(col => `<th style='border: 1px solid var(--darkblue); padding: 5px; background: var(--darkcy);'>${col}</th>`).join("") + "</tr>";
+              res.values.forEach(row => {
+                  table += "<tr>" + row.map(val => `<td style='border: 1px solid var(--darkblue); padding: 5px;'>${val}</td>`).join("") + "</tr>";
+              });
+              table += "</table><br>";
+              tableDisplay.innerHTML += table;
+          });
+      } catch (err) {
+          tableDisplay.innerHTML = `<div style="color:var(--red);">Table Render Error: ${err.message}</div>`;
+          window.colorLog("Error: " + err.message, "red", "compiler_output4");
+      }
+
+}
+async function runSqlCode() {
+    const sqlCode = document.getElementById("sqllite_input").value || editorRegistry['sqllite_input'].getValue() || '';
+    const tableDisplay = document.getElementById("sql_table_display");
+
+    tableDisplay.innerHTML = ""; // Clear previous results
+
+    try {
+        // 1. Ensure the engine is loaded only once
+        if (typeof db === 'undefined' || db === null) {
+            const SQL = await initSqlJs({
+                locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/${file}`
+            });
+            window.db = new SQL.Database(); // Attach to window so it persists
+            window.colorLog("✅ SQL Engine Initialized", "var(--theme-color)","compiler_output4");
+        }
+
+        // 2. Execute the query
+        const results = db.exec(sqlCode);
+        updateTableList();
+        if (results.length === 0) {
+            tableDisplay.innerHTML = "<div style='color:orange;'>Query executed (no rows returned).</div>";
+
+            return;
+        }
+
+        // 3. Build the table (Your logic here was good!)
+        renderResultsToTable(results);
+        window.colorLog("SQL Query Successful!", "#00ff00","compiler_output4");
+
+    } catch (err) {
+        tableDisplay.innerHTML = `<div style="color:var(--red);">SQL Error: ${err.message}</div>`;
+        window.colorLog("SQL Error: " + err.message, "red","compiler_output4");
+    }
+}
+/**
+ * Dedicated Query Function for Read-Only Operations
+ * Focuses purely on data retrieval and filtering.
+ */
+async function executeReadOnlyQuery() {
+    const queryInput = document.getElementById("sql_query_input").value.trim();
+    const tableDisplay = document.getElementById("sql_table_display");
+
+    // Safety Check: Force user to only use SELECT
+    if (!queryInput.toUpperCase().startsWith("SELECT")) {
+        window.colorLog("⚠️ Access Denied: Only SELECT queries are allowed here.", "orange", "compiler_output4");
+        return;
+    }
+
+    tableDisplay.innerHTML = "Querying...";
+
+    try {
+        // Ensure DB is initialized (reusing your existing logic)
+        if (typeof db === 'undefined') {
+            throw new Error("Database not initialized. Run setup first.");
+        }
+
+        const results = db.exec(queryInput);
+
+        if (results.length === 0) {
+            tableDisplay.innerHTML = "<div style='color:orange;'>No data found matching your criteria.</div>";
+            return;
+        }
+
+        // Logic to render the results (same as your current working code)
+        renderResultsToTable(results);
+
+        window.colorLog("🔍 Query Successful", "var(--theme-color)", "compiler_output4");
+
+    } catch (err) {
+        tableDisplay.innerHTML = `<div style="color:var(--red);">Filter Error: ${err.message}</div>`;
+    }
+}
+function updateTableList() {
+    if (!db) return;
+    const listContainer = document.getElementById("active_tables_list");
+    listContainer.innerHTML = ""; // Clear current list
+
+    try {
+        // Query the internal SQLite master list for user-created tables
+        const res = db.exec("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%';");
+
+        if (res.length > 0) {
+            res[0].values.forEach(row => {
+                const tableName = row[0];
+                const btn = document.createElement("button");
+                btn.innerText = `🗑️ DROP ${tableName}`;
+                btn.className = "runTheCode";
+                btn.style.width = "auto";
+                btn.style.borderColor = "orange";
+                btn.style.color = "orange";
+
+                // Clicking this button deletes ONLY this table
+                btn.onclick = () => {
+                    if (confirm(`Are you sure you want to delete table: ${tableName}?`)) {
+                        db.exec(`DROP TABLE ${tableName};`);
+                        window.colorLog(`Table '${tableName}' dropped.`, "orange","compiler_output4");
+                        updateTableList(); // Refresh the list
+                    }
+                };
+                listContainer.appendChild(btn);
+            });
+        } else {
+            listContainer.innerHTML = "<em style='color:var(--darkblue);'>No tables found in memory.</em>";
+        }
+    } catch (err) {
+        console.log("Error updating table list: " + err.message);
+    }
+}
+function clearsql() {
+    //document.getElementById("sqllite_input").value = "";
+    document.getElementById("sql_table_display").innerHTML = "";
+    output4.innerHTML = "<br>  Compiler ready...";
+    window.db = null; // 2. Kill the database instance
+    window.colorLog("✅ SQL Engine Cleared", "var(--theme-color)","compiler_output4");
+}
+
+function downloadSqlDb() {
+    if (!db) {
+        window.colorLog("No active database to download!", "orange","compiler_output4");
+        return;
+    }
+
+    try {
+        // 1. Export the database to a binary array (Uint8Array)
+        const binaryDb = db.export();
+
+        // 2. Create a Blob from the binary data
+        const blob = new Blob([binaryDb], { type: "application/x-sqlite3" });
+
+        // 3. Create the download link
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "workspace_database.db";
+
+        // 4. Trigger download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        window.colorLog("💾 SQL Database downloaded as .db", "#00ff00","compiler_output4");
+    } catch (err) {
+        window.colorLog("❌ SQL Export Failed: " + err.message, "red","compiler_output4");
+    }
+}
+//-------------------------------------------------------------------------------------
+/*saveCurrentSession()loadLastSession()*/
+//-auto-save-feature-----------
+window.onload = function() {
+    // 1. Restore the filename box
+    const lastUsedName = localStorage.getItem("saved_filename");
+    if (lastUsedName) {
+        document.getElementById("web_filename").value = lastUsedName;
+    }
+    // 2. Trigger the full session restoration
+    loadLastSession();
+};
+// 1. Setup the session variables properly
+function saveCurrentSession() {
+    try {
+        document.getElementById("saveSession").style.color = '#00aa41';
+        document.getElementById("saveSession").style.backgroundColor = '#fff';
+        // Capture every editor's current value
+        const pyCode = document.getElementById("code_input").value  || editorRegistry['code_input'].getValue();
+        const jsCode = document.getElementById("jscode_input").value || editorRegistry['jscode_input'].getValue();
+        const luaCode = document.getElementById("luacode_input").value || editorRegistry['luacode_input'].getValue();
+        const sqlCode = document.getElementById("sqllite_input").value || editorRegistry['sqllite_input'].getValue();
+        const webName = document.getElementById("web_filename").value;
+
+        // Save each project individually
+        localStorage.setItem("myProject", JSON.stringify({ name: webName || "web_project", code: jsCode }));
+        localStorage.setItem("pyProject", JSON.stringify({ name: "python_project", code: pyCode }));
+        localStorage.setItem("luaProject", JSON.stringify({ name: "lua_project", code: luaCode }));
+        localStorage.setItem("sqlProject", JSON.stringify({ name: "sql_project", code: sqlCode }));
+        setTimeout(() => {
+            document.getElementById("saveSession").style.color = '#00ff00';
+            document.getElementById("saveSession").style.backgroundColor = '#000000';
+        }, 1000);
+        window.colorLog("💾 Full Workspace Saved Safely!", "#00ff00");
+        //notifyUser("Session Saved Successfully!");
+    } catch (err) {
+        window.colorLog("❌ Save Failed: " + err.message, "red");
+        document.getElementById("saveSession").style.color = '#ff0000';
+    }
+}
+
+// 2. Safely add listeners and load data
+// SINGLE LOAD HANDLER
+window.addEventListener('load', () => {
+    // 1. Restore last filename
+    const savedName = localStorage.getItem("saved_filename");
+    const webFilenameInput = document.getElementById("web_filename");
+    if (webFilenameInput && savedName) webFilenameInput.value = savedName;
+
+    // 2. Setup Auto-Save for filename
+    if (webFilenameInput) {
+        webFilenameInput.addEventListener("input", (e) => {
+            localStorage.setItem("saved_filename", e.target.value);
+        });
+    }
+});
+/*autosave code (disabled)
+  document.getElementById("web_filename").addEventListener("input", (e) => {
+    localStorage.setItem("saved_filename", e.target.value);
+});
+*/
+const projectData = {
+    name: "accounting_v1",
+    code: `<html></html>`
+};
+// Store it
+localStorage.setItem("myProject", JSON.stringify(projectData));
+
+// Get it back
+const saved = JSON.parse(localStorage.getItem("myProject"));
+//===========================================================================================
+//==============================================================================
+function loadLastSession() {
+    // 1. Retrieve all the JSON strings
+    const savedWeb = JSON.parse(localStorage.getItem("myProject"));
+    const savedPy = JSON.parse(localStorage.getItem("pyProject"));
+    const savedLua = JSON.parse(localStorage.getItem("luaProject"));
+    const savedSql = JSON.parse(localStorage.getItem("sqlProject"));
+
+    // 2. Inject them back into the IDE (with existence checks)
+    if (savedWeb) {
+        document.getElementById("web_filename").value = savedWeb.name || "";
+        document.getElementById("jscode_input").value = savedWeb.code || "";
+    }
+    if (savedPy) {
+        document.getElementById("code_input").value = savedPy.code || "";
+    }
+    if (savedLua) {
+        document.getElementById("luacode_input").value = savedLua.code || "";
+    }
+    if (savedSql) {
+        document.getElementById("sqllite_input").value = savedSql.code || "";
+    }
+
+    window.colorLog("📂 Session Fully Restored!", "#00ff00");
+}
+//==================================================================================================
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function resetToLastSave() {
+    if (!confirm("Discard ALL current changes and revert to your last manual save?")) return;
+
+    // Retrieve all saved blocks
+    const savedWeb = JSON.parse(localStorage.getItem("myProject"));
+    const savedPy = JSON.parse(localStorage.getItem("pyProject"));
+    const savedLua = JSON.parse(localStorage.getItem("luaProject"));
+    const savedSql = JSON.parse(localStorage.getItem("sqlProject"));
+
+    // Inject values back into the textareas if they exist
+    if (savedWeb) {
+        document.getElementById("web_filename").value = savedWeb.name;
+        document.getElementById("jscode_input").value = savedWeb.code;
+    }
+    if (savedPy) document.getElementById("code_input").value = savedPy.code;
+    if (savedLua) document.getElementById("luacode_input").value = savedLua.code;
+    if (savedSql) document.getElementById("sqllite_input").value = savedSql.code;
+
+    window.colorLog("⏪ Full Workspace Reverted!", "orange");
+}
+//=======================================================================================================
+//+clear+all+function++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function clearAllStorage() {
+    // 1. Confirm with the user to prevent accidental wipes
+    if (!confirm("⚠️ This will PERMANENTLY delete all saved code across all tabs. Continue?")) return;
+
+    // 2. Wipe the specific keys from LocalStorage
+    localStorage.removeItem("myProject");
+    localStorage.removeItem("pyProject");
+    localStorage.removeItem("luaProject");
+    localStorage.removeItem("sqlProject");
+    localStorage.removeItem("saved_filename");
+    localStorage.removeItem("ide_snippets");
+    localStorage.removeItem("bugReports");
+    localStorage.removeItem("last_sync");
+    localStorage.removeItem("last_sync_date");
+    localStorage.removeItem("last_sync_time");
+    localStorage.removeItem("last_sync_status");
+    localStorage.removeItem("last_sync_error");
+    localStorage.removeItem("last_sync_timestamp");
+    localStorage.removeItem("last_sync_timestamp_date");
+    localStorage.removeItem("last_sync_timestamp_time");
+    localStorage.removeItem("last_sync_timestamp_status");
+    localStorage.removeItem("last_sync_timestamp_error");
+    localStorage.removeItem("last_sync_timestamp_id");
+    localStorage.clear();
+    // 3. Clear the actual textareas in the UI
+    document.getElementById("code_input").value = "";
+    document.getElementById("jscode_input").value = "";
+    document.getElementById("luacode_input").value = "";
+    document.getElementById("sqllite_input").value = "";
+    document.getElementById("web_filename").value = "";
+    document.getElementById("compiler_output").innerHTML = "<br>        Compiler Ready...";
+    window.colorLog("🔥 All Storage and Workspace Cleared!", "red");
+}
+// Initialize an array at the top of your script
+let commandHistory = [];
+// 1. You need a variable to track where you are in history
+let historyPos = -1;
+function handleTerminal(e) {
+
+  if (e.key === "Enter") {
+    const input = document.getElementById("terminal_input");
+    const history = document.getElementById("terminal_history");
+    const cmd = input.value.toLowerCase().trim();
+    if (cmd !== "") {commandHistory.push(cmd);}
+
+
+    let response = "";
+    if (cmd === "help") response = "Available: clear, help, status, save,date,<br> cmdhistory, clearhistory, report,bugs";
+    else if (cmd === "clear") { history.innerHTML = ""; input.value = ""; return; }
+    else if (cmd === "status") response = "Systems nominal. SQL/HTML/Lua/Py engines ready.";
+    else if (cmd === "save") { saveCurrentSession(); response = "Session data cached."; }
+    else if (cmd === "cmdhistory") { response = commandHistory.join("\n"); }
+    else if (cmd === "clearhistory") { commandHistory = []; response = "Command history cleared."; }
+    else if (cmd === "clearbugs") {localStorage.removeItem('bugReports');
+    history.innerHTML += `<div>[SYSTEM]: Bug database wiped clean.</div>`;}
+    else if (cmd === "jskys" || cmd === "jskeys") {history.innerHTML += "<br>In JS keys use Title case examples<br>Enter ArrowUp Alt Shift";}
+    // Add this inside your handleTerminal function's if/else block
+    else if (cmd === "date") {response = new Date().toLocaleString();/*This is JS getting the system time onbdclick=""*/
+    }
+
+    else response = `Command '${cmd}' not found.`; /*"Arrowdown"*/
+  if (e.key === "ArrowUp") {
+    if (commandHistory.length > 0) {
+        // Increment position to go "backwards" in time
+        historyPos = Math.min(historyPos + 1, commandHistory.length - 1);
+
+        // Pick the command from the end of the list
+        const pastCmd = commandHistory[commandHistory.length - 1 - historyPos];
+
+        // Put it back in the input box
+        document.getElementById("terminal_input").value = pastCmd;
+    }
+}
+  if (cmd.startsWith("report ")) {
+      // Example usage: report ID-Ragebait | JS changed IDs on me
+      const parts = cmd.replace("report ", "").split("|");
+      const title = parts[0]?.trim();
+      const desc = parts[1]?.trim() || "No description provided.";
+
+      if (title) {
+          const msg = saveBug(title, desc);
+          history.innerHTML += `<div>${msg}</div>`;
+      } else {
+          history.innerHTML += `<div style="color:red;">Usage: report [title] | [description]</div>`;
+      }
+  }
+
+  else if (cmd === "bugs") {
+      const logs = JSON.parse(localStorage.getItem('bugReports')) || [];
+      if (logs.length === 0) {
+          history.innerHTML += `<div>[SYSTEM]: No bugs reported yet. Good job!</div>`;
+      } else {
+          history.innerHTML += `<div style="color:yellow;">--- KNOWN BUG DATABASE ---</div>`;
+          logs.forEach(bug => {
+              history.innerHTML += `<div><b>#${bug.id} (${bug.date})</b>: <span style="color:cyan;">${bug.title}</span> - ${bug.desc}</div>`;
+          });
+      }
+  }
+    history.innerHTML += `<div>user@colab:~$ ${input.value}</div><div style="color:orange;">${response}</div>`;
+    input.value = "";
+    history.scrollTop = history.scrollHeight;
+  }
+}
+// 1. Add this variable near 'let enterIsHeld = false;'
+let enterIsHeld = false;
+let key2IsHeld = false;
+// 2. Add these global listeners at the bottom of your script tag
+window.addEventListener("keydown", (e) => {
+    // Check if Terminal (Tab 6) is the active tab
+    // (Ensure your tab-switching logic sets an 'activeTab' variable)
+    if (typeof activeTab !== 'undefined' && activeTab !== 'tab6') return;
+
+    const history = document.getElementById("terminal_history");
+
+    // Detect if Enter is being held down
+    if (e.key === "Alt") {
+        enterIsHeld = true;
+        e.preventDefault();
+    }
+    if (e.key === "Shift") {
+        key2IsHeld = true;
+        e.preventDefault();
+    }
+    if (e.key === "Enter") {enterIsHeld = false;};
+    // If Enter is held AND you press any other key Enter
+    if (enterIsHeld && e.key !== "Enter") {
+        e.preventDefault(); // Stop the browser from doing other things
+        // Log the key details to your terminal history
+        const info = `<div><span style="color:cyan;">[DEBUG]:</span> Key: <b style="color:var(--green);">${e.key}</b> | Code: <b>${e.code}</b></div>`;
+        history.innerHTML += info;
+
+        // Auto-scroll to the bottom
+        history.scrollTop = history.scrollHeight;
+}});
+window.addEventListener("keydown", (e) => {
+    // Detect Alt + 1 through Alt + 9
+    if (e.altKey && e.key >= "1" && e.key <= "9") {
+        e.preventDefault();
+        const tabNumber = e.key;
+        // This programmatically "clicks" the radio button for that tab
+        document.getElementById(`tab${tabNumber}`).checked = true;
+        // Inside your tab click listener or update health function
+        if (activeTab === "tab9") loadSnippets();
+        // Optional: Trigger your load functions (like snippets for Tab 9)
+        if (tabNumber === "8") loadSnippets();
+        if (e.key === "Escape" && activeTab === "tab6") {
+          document.getElementById("terminal_history").innerHTML = "";
+          document.getElementById("terminal_input").value = "";
+}
+    }
+});
+window.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+        enterIsHeld = false;
+    }
+});
+function renderMarkdown() {
+    const input = document.getElementById("markdown_input").value;
+    const display = document.getElementById("markdown_render");
+
+    // Simple parser for Bold, Italics, and Headers
+    let html = input // Convert to HTML
+        //.replace(/```([\s\S]*?)```/gim, '<pre><code>$1</code></pre>')
+        //.replace(/^### (.*$)/gim, '<h3>$1</h3>')
+        //.replace(/^## (.*$)/gim, '<h2>$1</h2>')
+        //.replace(/^# (.*$)/gim, '<h1>$1</h1>')
+        //.replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+        //.replace(/\*(.*)\*/gim, '<i>$1</i>')
+        //.replace(/\n/gim, '<br>');
+
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        // Code blocks ```code```
+        .replace(/```([\s\S]*?)```/g, '<pre style="background: #111; padding: 8px; border-radius: 4px; overflow-x: auto;"><code>$1</code></pre>')
+        // Inline code `code`
+        .replace(/`([^`]+)`/g, '<code style="font-family: monospace; color: #ce9178; background: #2d2d2d; padding: 2px 4px; border-radius: 3px;">$1</code>')
+        // Headers with gim flags
+        .replace(/^### (.*$)/gim, '<h3 style="color: #34d399; font-size: 15px; margin: 8px 0 4px 0;">$1</h3>')
+        .replace(/^## (.*$)/gim, '<h2 style="color: #34d399; font-size: 16px; margin: 10px 0 6px 0;">$1</h2>')
+        .replace(/^# (.*$)/gim, '<h1 style="color: #34d399; font-size: 18px; margin: 12px 0 8px 0;">$1</h1>')
+        // Bold & Italics
+        .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+        .replace(/\*(.*)\*/gim, '<i>$1</i>')
+        // Newlines (handles both literal \n strings and real newlines)
+        .replace(/\\n/gim, '<br>')
+        .replace(/\n/gim, '<br>')
+        // Bold **text**
+        .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+        // Italics *text*
+        .replace(/\*([^*]+)\*/g, '<i>$1</i>')
+        // Headers (# to ###)
+        .replace(/^### (.*?)$/gm, '<h3 style="color: #34d399; font-size: 15px; margin: 4px 0;">$1</h3>')
+        .replace(/^## (.*?)$/gm, '<h2 style="color: #34d399; font-size: 16px; margin: 6px 0;">$1</h2>')
+        .replace(/^# (.*?)$/gm, '<h1 style="color: #34d399; font-size: 18px; margin: 8px 0;">$1</h1>')
+    display.innerHTML = html;
+}
+function updateSystemHealth() {
+    const pyCode = document.getElementById("code_input").value.length || editorRegistry['code_input'].getValue().length || 0;
+    const webCode = document.getElementById("jscode_input")?.value.length || editorRegistry['jscode_input'].getValue().length || 0;
+    const luaCode = document.getElementById("lua_input")?.value.length || editorRegistry['lua_input'].getValue().length || 0;
+    const sqlCode = document.getElementById("sqllite_input")?.value.length || editorRegistry['sqllite_input'].getValue().length || 0;
+
+    // Calculate LocalStorage usage (approximate bytes)
+    const storageUsed = encodeURI(JSON.stringify(localStorage)).length;
+
+    document.getElementById("health_stats").innerHTML = `
+        <p>📊 Total Characters Typed: ${pyCode + luaCode + sqlCode + webCode}</p>
+        <p>💾 Storage Used: ${(storageUsed / 1024).toFixed(2)} KB / 5.0 MB</p>
+        <p>🔋 Engine: Python 3 / Lua 5.3 / SQLite 3</p>
+    `;
+}
+function updateSaveTimestamp() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    const dateString = now.toLocaleDateString();
+
+    const display = document.getElementById("last_saved_display");
+    if (display) {
+        display.innerHTML = `Last sync: <span style="color:var(--green);">${dateString} @ ${timeString}</span>`;
+        display.style.borderColor = "var(--green)";
+    }
+}
+
+
+function loadSnippets() {
+    const list = document.getElementById("snippet_list");
+    if (!list) return;
+
+    const snippets = JSON.parse(localStorage.getItem("ide_snippets") || "[]");
+    list.innerHTML = snippets.length ? "" : "<p style='color:var(--darkblue);'>No snippets saved yet.</p>";
+
+    snippets.forEach(item => {
+        const card = document.createElement("div");
+        card.style = "border: 1px solid var(--darkblue); padding: 10px; background: var(--darkcy); position: relative;";
+        card.innerHTML = `
+            <strong style="color:var(--theme-color);">${item.title}</strong>
+            <pre style="font-size:11px; color:#aaa; overflow:hidden; max-height:50px;">${item.code.substring(0, 50)}...</pre>
+            <div style="display:flex; gap:5px; margin-top:5px;">
+                <button onclick="copySnippet('${item.id}')" style="background:var(--savebtnbc); color:var(--green); border:1px solid var(--green); cursor:pointer; font-size:10px;">📋 Copy</button>
+                <button onclick="deleteSnippet('${item.id}')" style="background:var(--savebtnbc); color:red; border:1px solid red; cursor:pointer; font-size:10px;">🗑️ Del</button>
+            </div>
+        `;
+        list.appendChild(card);
+    });
+}
+// Function to save a new snippet
+function saveSnippet() {
+    const title = document.getElementById("snippet_title").value;
+    const code = document.getElementById("snippet_code").value;
+
+    if (!title || !code) {
+        window.colorLog("❌ Title and Code are required!", "red");
+        return;
+    }
+
+    const snippets = JSON.parse(localStorage.getItem("ide_snippets") || "[]");
+    snippets.push({ title, code, id: Date.now() });
+    localStorage.setItem("ide_snippets", JSON.stringify(snippets));
+
+    // Clear inputs and refresh the list
+    document.getElementById("snippet_title").value = "";
+    document.getElementById("snippet_code").value = "";
+    loadSnippets();
+    window.colorLog(`✅ Snippet '${title}' saved to library!`, "var(--green)");
+    window.colorLog(`✅ Saved: ${title}`, "var(--theme-color)");
+}
+
+// Function to display saved snippets
+function loadSnippets() {
+    const list = document.getElementById("snippet_list");
+    if (!list) return;
+
+    const snippets = JSON.parse(localStorage.getItem("ide_snippets") || "[]");
+    list.innerHTML = snippets.length ? "" : "<p style='color:var(--darkblue);'>Library is empty.</p>";
+    // Inside loadSnippets()
+    const card = document.createElement("div");
+    card.className = "snippet-card"; // <--- Add this line!
+    card.style = "border: 1px solid var(--darkblue); ...";
+    snippets.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "snippet-card"; // Use your existing CSS classes
+        card.style = "border: 1px solid var(--darkblue); padding: 10px; background: rgba(0,0,0,0.2); margin-bottom:10px;";
+        card.innerHTML = `
+            <strong style="color:var(--theme-color);">${item.title}</strong>
+            <div style="display:flex; gap:10px; margin-top:10px;">
+                <button onclick="copySnippet('${item.id}')" class="runTheCode" style="width:auto; font-size:12px;">📋 Copy</button>
+                <button onclick="loadToEditor('${item.id}')" class="runTheCode" style="width:auto; font-size:12px; border-color:orange; color:orange;">⚡ Load</button>
+                <button onclick="deleteSnippet('${item.id}')" class="runTheCode" style="width:auto; font-size:12px; border-color:red; color:red;">🗑️ Del</button>
+            </div>
+        `;
+        list.appendChild(card);
+    });
+}
+function loadToEditor(id) {
+    const snippets = JSON.parse(localStorage.getItem("ide_snippets") || "[]");
+    const item = snippets.find(s => s.id == id);
+    if (item) {
+        const editor = document.getElementById("code_input"); // Target your main textarea
+        editor.value = item.code;
+
+        // Trigger your existing sync function to update line numbers
+        if (typeof updateLineNumbers === "function") updateLineNumbers();
+
+        window.colorLog(`⚡ Snippet '${item.title}' loaded to Editor!`, "var(--green)");
+    }
+}
+function filterSnippets() {
+    const query = document.getElementById("snippet_search").value.toLowerCase();
+    const cards = document.querySelectorAll(".snippet-card");
+
+    // We need the raw data from localStorage to check the actual code content
+    const snippets = JSON.parse(localStorage.getItem("ide_snippets") || "[]");
+
+    cards.forEach((card, index) => {
+        const title = card.querySelector("strong").innerText.toLowerCase();
+
+        // Use the index to find the corresponding code in our data array
+        const codeContent = snippets[index]?.code.toLowerCase() || "";
+
+        // If the query is in the title OR the code (the comment tag)
+        if (title.includes(query) || codeContent.includes(query)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+// Function to delete a snippet
+function deleteSnippet(id) {
+    let snippets = JSON.parse(localStorage.getItem("ide_snippets") || "[]");
+    snippets = snippets.filter(s => s.id != id);
+    localStorage.setItem("ide_snippets", JSON.stringify(snippets));
+    loadSnippets();
+}
+// Helper: Copy code to clipboard
+function copySnippet(id) {
+    const snippets = JSON.parse(localStorage.getItem("ide_snippets") || "[]");
+    const item = snippets.find(s => s.id == id);
+    if (item) {
+        navigator.clipboard.writeText(item.code);
+        window.colorLog("📋 Copied to clipboard!", "var(--theme-color)");
+    }
+}
+// Helper: Delete snippet
+function deleteSnippet(id) {
+    let snippets = JSON.parse(localStorage.getItem("ide_snippets") || "[]");
+    snippets = snippets.filter(s => s.id != id);
+    localStorage.setItem("ide_snippets", JSON.stringify(snippets));
+    loadSnippets();
+}
+function saveBug(title, description) {
+    // 1. Get existing logs or start a new list
+    let bugLogs = JSON.parse(localStorage.getItem('bugReports')) || [];
+
+    // 2. Add the new bug with a timestamp
+    const newBug = {
+        id: bugLogs.length + 1,
+        date: new Date().toLocaleString(),
+        title: title,
+        desc: description
+    };
+
+    bugLogs.push(newBug);
+    localStorage.setItem('bugReports', JSON.stringify(bugLogs));
+    return `[SYSTEM]: Bug '${title}' saved to database.`;
+}
+function downloadSystemReport() {
+    const stats = document.getElementById("health_stats").innerText;
+    const storage = document.getElementById("storage_text").innerText;
+    const lastSave = document.getElementById("last_saved_display").innerText;
+
+    const reportContent = `
+    === GEMINI-IDE SYSTEM REPORT ===
+    Generated: ${new Date().toLocaleString()}
+    --------------------------------
+    ${stats}
+    Storage Usage: ${storage}
+    ${lastSave}
+    --------------------------------
+    Status: All Engines (Py, Lua, SQL) Operational.
+    `;
+
+    const blob = new Blob([reportContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `IDE_Report_${new Date().getTime()}.txt`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+
+    window.colorLog("✅ System Report Downloaded", "var(--green)");
+}
+function opendevTools(){alert(
+`How to Open Developer Tools:
+
+Windows (Chrome/Edge/Firefox):
+- Press Ctrl + Shift + I
+- Or press Ctrl + Shift + J
+- Or press Ctrl + Shift + C
+- Or press F12
+- If F12 doesn't work, try Fn + F12
+
+Mac (Chrome/Edge/Firefox):
+- Press Cmd + Option + I
+
+Safari (Mac):
+- Enable Develop menu in Safari Settings → Advanced
+- Then press Cmd + Option + I
+
+Chromebook:
+- Press Ctrl + Shift + I
+
+Universal method (all browsers):
+- Right-click the page and click "Inspect"`
+);}
+const tabLabels = document.querySelectorAll(".tab-labels");
+
+let hoverTimer = null;
+
+tabLabels.forEach(label => {
+
+  label.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    label.classList.add("drag-hover");
+
+    if (!hoverTimer) {
+      hoverTimer = setTimeout(() => {
+        const tabId = label.getAttribute("for");
+        document.getElementById(tabId).checked = true;
+        label.classList.remove("drag-hover");
+      }, 1500); // 1.5 sec delay
+    }
+  });
+
+  label.addEventListener("dragleave", () => {
+    clearTimeout(hoverTimer);
+    hoverTimer = null;
+    label.classList.remove("drag-hover");
+  });
+
+  label.addEventListener("drop", (e) => {
+    e.preventDefault();
+    clearTimeout(hoverTimer);
+    hoverTimer = null;
+    label.classList.remove("drag-hover");
+    const text = e.dataTransfer.getData("text/plain");
+
+    const tabId = label.getAttribute("for");
+    document.getElementById(tabId).checked = true;
+
+    // Example: if dropping into JS tab
+    if (tabId === "tab2") {
+      document.getElementById("jscode_input").value = text;
+    }
+  });
+
+});
+
+//=keep=at=the=bottom========================================================================================
+// Initialize the table list on startup
+setTimeout(() => {
+    if (window.db) updateTableList();
+}, 1000);
+
+function lang_linting(lang=`rust`, value=``, id=`rustCode`, theme="vs-dark") {
+require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.46.0/min/vs' }});
+// old -> var editor
+require(['vs/editor/editor.main'], function () {
+    // This connects Monaco to your HTML div
+    editorRegistry[id] = monaco.editor.create(document.getElementById(`${id}`), {
+        value: `${value}`, // ex: fn main() {\n\tprintln!("Hello, Rust!")\n}
+        language: `${lang.toLowerCase()}`, // ex rust
+        theme: 'vs-dark' // Classic "Dark Mode"
+    });
+    console.log(`Editor '${id}' initialized successfully.`);
+});
+}
+const initializedEditors = new Set();
+const html_value = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+</style>
+</head>
+<body>
+
+</body>
+<script>
+
+<\/script>
+</html>
+`
+document.getElementById('tab1').addEventListener('change', function(event) {
+    if (event.target.checked) {
+        // Only run if this ID hasn't been initialized yet
+        if (!initializedEditors.has('code_input')) {
+            console.log("Checkbox is checked! 🟩 Initializing py editor...");
+            lang_linting('python', '', 'code_input');
+            initializedEditors.add('code_input'); // Mark as done
+        } else {
+            console.log("Checkbox is checked! 🟩 Editor already active.");
+        }
+    } else {
+        console.log("Checkbox is unchecked! 🟥");
+    }
+});
+document.getElementById('tab2').addEventListener('change', function(event) {
+    if (event.target.checked) {
+        // Only run if this ID hasn't been initialized yet
+        if (!initializedEditors.has('jscode_input')) {
+            console.log("Checkbox is checked! 🟩 Initializing JS editor...");
+            lang_linting('html', `${html_value}`, 'jscode_input');
+            initializedEditors.add('jscode_input'); // Mark as done
+        } else {
+            console.log("Checkbox is checked! 🟩 Editor already active.");
+        }
+    } else {
+        console.log("Checkbox is unchecked! 🟥");
+    }
+});
+document.getElementById('tab3').addEventListener('change', function(event) {
+    if (event.target.checked) {
+        // Only run if this ID hasn't been initialized yet
+        if (!initializedEditors.has('luacode_input')) {
+            console.log("Checkbox is checked! 🟩 Initializing Lua editor...");
+            lang_linting('lua', '', 'luacode_input');
+            initializedEditors.add('luacode_input'); // Mark as done
+        } else {
+            console.log("Checkbox is checked! 🟩 Editor already active.");
+        }
+    } else {
+            console.log("Checkbox is unchecked! 🟥");
+        }
+})
+document.getElementById('tab4').addEventListener('change', function(event) {
+    if (event.target.checked) {
+        // Only run if this ID hasn't been initialized yet
+        if (!initializedEditors.has('sqllite_Input')) {
+            console.log("Checkbox is checked! 🟩 Initializing SQL editor...");
+            lang_linting('sql', '', 'sqllite_input');
+            initializedEditors.add('sqllite_Input'); // Mark as done
+        } else {
+            console.log("Checkbox is checked! 🟩 Editor already active.");
+        }
+    } else {
+        console.log("Checkbox is unchecked! 🟥");
+    }
+});
+/*
+try {
+  setTimeout(() => {
+        lang_linting('python','','code_input');
+    }, 1);
+} catch (e) {
+  console.error(e);
+} finally {
+  console.log("Python editor initialized successfully.");
+}
+*/
+function createNewTab() {
+// 1. Grab the live outerHTML of the current page (or a specific container like a main wrapper)
+const pageHTML0 = document.documentElement.outerHTML;
+if (document.querySelector('.output_subarea') === null) {
+  //
+  pageWindow = pageHTML0;
+} else {
+  pageWindow = document.querySelector('.output_subarea').innerHTML;
+}
+
+const pageHTML = '<!DOCTYPE html>\n' + pageWindow;
+// 2. Open a new blank window/tab
+const splitWindow = window.open('', '_blank', 'width=800,height=900');
+
+// 3. Write the live DOM directly into the new window's document
+splitWindow.document.open();
+const basetemplate = '<!DOCTYPE html>';
+//splitWindow.document.write(basetemplate);
+splitWindow.document.write(pageHTML);
+splitWindow.document.close();
+const newScript = splitWindow.document.createElement('script');
+newScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.46.0/min/vs/loader.min.js';
+splitWindow.document.head.appendChild(newScript);
+const newScript2 = splitWindow.document.createElement('script');
+newScript2.src = 'https://pyscript.net/releases/2024.1.1/core.js';
+newScript2.type = 'module';
+newScript2.crossorigin = 'anonymous';
+splitWindow.document.head.appendChild(newScript2);
+const newScript3 = splitWindow.document.createElement('script');
+newScript3.src = 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js';
+newScript3.type = 'module';
+newScript3.crossorigin = 'anonymous';
+splitWindow.document.head.appendChild(newScript3);
+const newScript4 = splitWindow.document.createElement('script');
+newScript4.src = 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js';
+splitWindow.document.head.appendChild(newScript4);
+const newScript5 = splitWindow.document.createElement('script');
+newScript5.src = 'https://cdnjs.cloudflare.com/ajax/libs/xterm/5.5.0/xterm.js';
+newScript5.type = 'module';
+newScript5.crossorigin = 'anonymous';
+splitWindow.document.head.appendChild(newScript5);
+const newScript6 = splitWindow.document.createElement('script');
+newScript6.src = 'https://cdn.jsdelivr.net/npm/fengari-web@0.1.4/dist/fengari-web.min.js';
+newScript6.type = 'module';
+newScript6.crossorigin = 'anonymous';
+splitWindow.document.head.appendChild(newScript6);
+}
+
+// experimental Ai api dev manager says its the future ugh
+// Add this to your JS logic (read, write, run, feedback, context)
+/*
+window.BusForgeAPI = {
+    // Agent reads state
+    getCode: (tabId) => window.editorRegistry[tabId].getValue(),
+
+    // Agent writes/fixes code
+    setCode: (tabId, newCode) => window.editorRegistry[tabId].setValue(newCode),
+
+    // Agent triggers actions
+    execute: (tabId) => {
+        // Automatically switch tabs then run
+        document.getElementById(tabId).click();
+        window.execute_user_code();
+    }
+};
+
+window.BusForgeAPI = {
+    // 1. READ-ONLY: Give the agent context, but don't let it touch the DOM directly
+    getEditorState: (tabId) => ({
+        code: window.editorRegistry[tabId].getValue(),
+        language: 'rust' // or 'python'
+    }),
+
+    // 2. CONTROLLED-WRITE: Agent sends a patch, your IDE validates it
+    applyPatch: (tabId, code) => {
+        // You could add a check here: "Only allow if code doesn't contain forbidden keywords"
+        window.editorRegistry[tabId].setValue(code);
+    },
+
+    // 3. EXECUTION: The agent triggers the run, but YOU (the user) see the console output
+    runAndReport: (tabId) => {
+        window.execute_user_code();
+        // Return the current output stream so the Agent knows what happened
+        return document.getElementById('compiler_output').innerText;
+    }
+};
+*/
+function loadScriptIfNeeded(scriptSrc, attributes = {}) {
+    return new Promise((resolve, reject) => {
+        // 1. Check if a script with this source already exists in the document
+        const existingScript = document.querySelector(`script[src="${scriptSrc}"]`);
+
+        if (existingScript) {
+            // Already there, no need to re-inject
+            resolve(existingScript);
+            return;
+        }
+
+        // 2. Create the script element
+        const script = document.createElement('script');
+        script.src = scriptSrc;
+
+        // 3. Apply any extra attributes (like type="module", crossorigin, integrity, etc.)
+        for (const [key, value] of Object.entries(attributes)) {
+            script.setAttribute(key, value);
+        }
+
+        script.onload = () => resolve(script);
+        script.onerror = () => reject(new Error(`Failed to load script: ${scriptSrc}`));
+
+        // 4. Inject it into the head
+        document.head.appendChild(script);
+    });
+}
+
+async function initializeWorkspaceScripts() {
+    try {
+        //await loadScriptIfNeeded("https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.46.0/min/vs/loader.min.js");
+        await loadScriptIfNeeded("https://pyscript.net/releases/2024.1.1/core.js", { type: "module", crossorigin: "anonymous" });
+        await loadScriptIfNeeded("https://cdn.jsdelivr.net/npm/fengari-web@0.1.4/dist/fengari-web.min.js", { crossorigin: "anonymous" });
+        await loadScriptIfNeeded("https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js", { crossorigin: "anonymous" });
+        await loadScriptIfNeeded("https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js");
+        await loadScriptIfNeeded("https://cdnjs.cloudflare.com/ajax/libs/xterm/5.5.0/xterm.js", { crossorigin: "anonymous" });
+        console.log("All heavy dependencies loaded successfully without duplicates!");
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+// Call this inside your newly opened split window context
+//initializeWorkspaceScripts();
+//===========================================================================================================
+</script>
+</main>
+</body>
+</html>
